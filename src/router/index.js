@@ -6,65 +6,82 @@ const router = createRouter({
     {
       path: '/',
       name: 'Home',
+      meta: {
+        title: 'Welcome to the dashboard'
+      },
       component: () => import('../views/Home.vue')
     },
     {
       path: '/login',
       name: 'Login',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
+      meta: {
+        title: 'Welcome to the dashboard'
+      },
       component: () => import('../views/Login.vue')
     },
     {
       path: '/orders',
       name: 'Orders',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
+      meta: {
+        title: 'Welcome to the dashboard'
+      },
       component: () => import('../views/Orders.vue')
     },
     {
       path: '/orders/create',
       name: 'OrdersCreate',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
+      meta: {
+        title: 'Welcome to the dashboard'
+      },
       component: () => import('../views/OrdersCreate.vue')
     },
     {
       path: '/companies',
       name: 'Companies',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
+      meta: {
+        title: 'Welcome to the dashboard'
+      },
       component: () => import('../views/Companies.vue')
     },
     {
       path: '/companies/create',
       name: 'CompaniesCreate',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
+      meta: {
+        title: 'Welcome to the dashboard'
+      },
       component: () => import('../views/CompaniesCreate.vue')
     },
     {
       path: '/products',
       name: 'Products',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
+      meta: {
+        title: 'Welcome to the dashboard'
+      },
       component: () => import('../views/Products.vue')
     },
     {
       path: '/products/create',
       name: 'ProductsCreate',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
+      meta: {
+        title: 'Welcome to the dashboard'
+      },
       component: () => import('../views/ProductsCreate.vue')
     },
   ]
 })
+
+// router.beforeEach((to, from, next) => {
+//   // Get the page title from the route meta data that we have defined
+//   // See further down below for how we setup this data
+//   console.log(to)
+//   const title = to.meta.title
+// // If the route has a title, set it as the page title of the document/page
+//   if (title){
+//     document.title = title
+//   }
+//   // Continue resolving the route
+//   next()
+// })
+
 
 export default router

@@ -1,11 +1,10 @@
 <script setup>
 import { ref } from 'vue'
 import MainLayout from '../layouts/mainLayout.vue';
-const pageTitle = ref('Create Company')
 </script>
 <template>
   <main-layout>
-    {{ pageTitle }}
+    {{ title }}
     <form>
       <div class="mb-6">
         <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">კომპანიის
