@@ -7,7 +7,7 @@ const router = createRouter({
       path: '/',
       name: 'Home',
       meta: {
-        title: 'Welcome to the dashboard'
+        title: 'Home Page'
       },
       component: () => import('../views/Home.vue')
     },
@@ -15,7 +15,7 @@ const router = createRouter({
       path: '/login',
       name: 'Login',
       meta: {
-        title: 'Welcome to the dashboard'
+        title: 'Log In'
       },
       component: () => import('../views/Login.vue')
     },
@@ -23,7 +23,7 @@ const router = createRouter({
       path: '/orders',
       name: 'Orders',
       meta: {
-        title: 'Welcome to the dashboard'
+        title: 'Orders'
       },
       component: () => import('../views/Orders.vue')
     },
@@ -31,7 +31,7 @@ const router = createRouter({
       path: '/orders/create',
       name: 'OrdersCreate',
       meta: {
-        title: 'Welcome to the dashboard'
+        title: 'Create Order'
       },
       component: () => import('../views/OrdersCreate.vue')
     },
@@ -39,7 +39,7 @@ const router = createRouter({
       path: '/companies',
       name: 'Companies',
       meta: {
-        title: 'Welcome to the dashboard'
+        title: 'Companies'
       },
       component: () => import('../views/Companies.vue')
     },
@@ -47,7 +47,7 @@ const router = createRouter({
       path: '/companies/create',
       name: 'CompaniesCreate',
       meta: {
-        title: 'Welcome to the dashboard'
+        title: 'Create Company'
       },
       component: () => import('../views/CompaniesCreate.vue')
     },
@@ -55,7 +55,7 @@ const router = createRouter({
       path: '/products',
       name: 'Products',
       meta: {
-        title: 'Welcome to the dashboard'
+        title: 'Products'
       },
       component: () => import('../views/Products.vue')
     },
@@ -63,25 +63,12 @@ const router = createRouter({
       path: '/products/create',
       name: 'ProductsCreate',
       meta: {
-        title: 'Welcome to the dashboard'
+        title: 'Create Product'
       },
       component: () => import('../views/ProductsCreate.vue')
     },
   ]
 })
-
-// router.beforeEach((to, from, next) => {
-//   // Get the page title from the route meta data that we have defined
-//   // See further down below for how we setup this data
-//   console.log(to)
-//   const title = to.meta.title
-// // If the route has a title, set it as the page title of the document/page
-//   if (title){
-//     document.title = title
-//   }
-//   // Continue resolving the route
-//   next()
-// })
 
 
 export default router
