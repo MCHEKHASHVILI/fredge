@@ -1,8 +1,18 @@
+/**
+ * Fields
+ * 
+ * ფიზიკური თუ იურიდიული პირი <= ჩეკბოქსი
+ * ტელეფონის ნომერი
+ * ჯგუფი (კონტრაგენტების გაერთიანება)
+ * 
+ * 
+ */
+
 const companies = {
     namespaced: true,
     state() {
         return {
-            fields: ["id", "name", "license", "email", "address"],
+            fields: [ "id", "name", "license", "email", "address"],
             companies: [
                 {
                     id: 1,

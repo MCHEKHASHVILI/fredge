@@ -63,6 +63,10 @@ const props = defineProps({
                                 </th>
                                 <th scope="col"
                                     :class="['px-6 py-3 text-xs font-bold text-gray-500 uppercase', 'text-right']">
+                                    Show
+                                </th>
+                                <th scope="col"
+                                    :class="['px-6 py-3 text-xs font-bold text-gray-500 uppercase', 'text-right']">
                                     Edit
                                 </th>
                                 <th scope="col"
@@ -71,7 +75,6 @@ const props = defineProps({
                                 </th>
                             </tr>
                         </thead>
-
                         <tbody class="divide-y divide-gray-200">
                             <tr v-for="item in data">
                                 <td class="py-3 pl-4">
@@ -87,6 +90,11 @@ const props = defineProps({
                                 <td v-for="field in fields"
                                     class="px-6 py-4 text-sm font-medium text-gray-800 whitespace-nowrap">
                                     {{ item[field] }}
+                                </td>
+                                <td class="px-6 py-4 text-sm font-medium text-right whitespace-nowrap">
+                                    <a class="text-blue-500 hover:text-blue-700" href="#">
+                                        Show
+                                    </a>
                                 </td>
                                 <td class="px-6 py-4 text-sm font-medium text-right whitespace-nowrap">
                                     <a class="text-green-500 hover:text-green-700" href="#">
