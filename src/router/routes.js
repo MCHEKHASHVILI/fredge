@@ -1,12 +1,5 @@
 import { RouterView } from 'vue-router'
 
-import CompaniesIndex from '@/views/companies/Index.vue'
-import CompaniesCreate from '@/views/companies/Create.vue'
-import Login from '@/views/Login.vue'
-import OrdersIndex from '@/views/orders/Index.vue'
-import OrdersCreate from '@/views/orders/Create.vue'
-
-
 const routes = [
     {
       path: '/',
@@ -22,16 +15,16 @@ const routes = [
       meta: {
         title: 'Log In'
       },
-      component: Login
+      component: () => import('../views/Login.vue')
     },
     {
       path: '/orders',
       component: RouterView,
       children: [
         {
-          path: "",
+          path: "/",
           name: "Orders",
-          component: () => OrdersIndex,
+          component: () => import('@/views/orders/Index.vue'),
           meta: {
             title: 'Orders'
           },
@@ -39,7 +32,7 @@ const routes = [
         {
           path: "create",
           name: "Orders Create",
-          component: OrdersCreate,
+          component: () => import('@/views/orders/Create.vue'),
           meta: {
             title: 'Orders Create'
           },
