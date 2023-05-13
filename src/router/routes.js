@@ -46,7 +46,7 @@ const routes = [
         {
           path: "",
           name: "Companies",
-          component: () => import('@views/companies/Index.vue'),
+          component: () => import('@/views/companies/Index.vue'),
           meta: {
             title: 'Companies'
           },
@@ -54,7 +54,7 @@ const routes = [
         {
           path: "create",
           name: "Companies Create",
-          component: () => import('@views/companies/Create.vue'),
+          component: () => import('@/views/companies/Create.vue'),
           meta: {
             title: 'Companies Create'
           },
