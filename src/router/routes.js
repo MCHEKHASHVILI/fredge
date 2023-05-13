@@ -22,7 +22,7 @@ const routes = [
       component: RouterView,
       children: [
         {
-          path: "/",
+          path: "",
           name: "Orders",
           component: () => import('@/views/orders/Index.vue'),
           meta: {
