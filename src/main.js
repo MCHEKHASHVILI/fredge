@@ -8,6 +8,7 @@ import axios from "axios"
 
 axios.defaults.baseURL = 'https://api.laradevtest.com'
 axios.defaults.withCredentials = true
+axios.defaults.headers.common['Accept'] = 'Application/json'
 
 axios.get('sanctum/csrf-cookie')
 
