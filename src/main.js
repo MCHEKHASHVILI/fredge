@@ -9,7 +9,7 @@ import axios from "axios"
 axios.defaults.baseURL = 'https://api.laradevtest.com'
 axios.defaults.withCredentials = true
 
-axios.get('/csrf-cookie')
+axios.get('sanctum/csrf-cookie')
 
 const app = createApp(App)
 
