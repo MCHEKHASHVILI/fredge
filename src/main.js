@@ -4,6 +4,13 @@ import router from './router'
 import store from './store'
 import './assets/main.css'
 
+import axios from "axios"
+
+axios.defaults.baseURL = 'api.laradevtest.com'
+axios.defaults.withCredentials = true
+
+axios.get('/csrf-cookie')
+
 const app = createApp(App)
 
 app.use(store)
