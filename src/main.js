@@ -6,7 +6,7 @@ import './assets/main.css'
 
 import axios from "axios"
 
-axios.defaults.baseURL = 'api.laradevtest.com'
+axios.defaults.baseURL = 'https://api.laradevtest.com'
 axios.defaults.withCredentials = true
 
 axios.get('/csrf-cookie')
