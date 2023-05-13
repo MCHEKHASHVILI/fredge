@@ -5,12 +5,6 @@ import CompaniesCreate from '@/views/companies/Create.vue'
 import Login from '@/views/Login.vue'
 import OrdersIndex from '@/views/orders/Index.vue'
 import OrdersCreate from '@/views/orders/Create.vue'
-import CompaniesCreate from '@/views/companies/Create.vue'
-import CompaniesCreate from '@/views/companies/Create.vue'
-import CompaniesCreate from '@/views/companies/Create.vue'
-import CompaniesCreate from '@/views/companies/Create.vue'
-import CompaniesCreate from '@/views/companies/Create.vue'
-import CompaniesCreate from '@/views/companies/Create.vue'
 
 
 const routes = [
