@@ -2,6 +2,16 @@ import { RouterView } from 'vue-router'
 
 import CompaniesIndex from '@/views/companies/Index.vue'
 import CompaniesCreate from '@/views/companies/Create.vue'
+import Login from '@/views/Login.vue'
+import OrdersIndex from '@/views/orders/Index.vue'
+import OrdersCreate from '@/views/orders/Create.vue'
+import CompaniesCreate from '@/views/companies/Create.vue'
+import CompaniesCreate from '@/views/companies/Create.vue'
+import CompaniesCreate from '@/views/companies/Create.vue'
+import CompaniesCreate from '@/views/companies/Create.vue'
+import CompaniesCreate from '@/views/companies/Create.vue'
+import CompaniesCreate from '@/views/companies/Create.vue'
+
 
 const routes = [
     {
@@ -18,7 +28,7 @@ const routes = [
       meta: {
         title: 'Log In'
       },
-      component: () => import('../views/Login.vue')
+      component: Login
     },
     {
       path: '/orders',
@@ -27,7 +37,7 @@ const routes = [
         {
           path: "",
           name: "Orders",
-          component: () => import('@/views/orders/Index.vue'),
+          component: () => OrdersIndex,
           meta: {
             title: 'Orders'
           },
@@ -35,7 +45,7 @@ const routes = [
         {
           path: "create",
           name: "Orders Create",
-          component: () => import('@/views/orders/Create.vue'),
+          component: OrdersCreate,
           meta: {
             title: 'Orders Create'
           },
