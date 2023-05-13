@@ -1,11 +1,15 @@
 <script setup>
 import { ref } from 'vue'
-import MainLayout from '../layouts/mainLayout.vue';
+import MainLayout from '@/layouts/mainLayout.vue';
+import VueTailwindDatepicker from 'vue-tailwind-datepicker'
+const date = ref()
+const pageTitle = ref('Create Orders')
 </script>
 <template>
   <main-layout>
-    {{ title }}
+    {{ pageTitle }}
     <form>
+      <VueTailwindDatepicker :model-value="date" as-single />
       <div class="mb-6">
         <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">კომპანიის
           დასახელება</label>

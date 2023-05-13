@@ -1,6 +1,6 @@
 <script>
-import MainLayout from '../layouts/mainLayout.vue';
-import DefaultTable from '../components/tables/defaultTable.vue'
+import MainLayout from '@/layouts/mainLayout.vue';
+import DefaultTable from '@/components/tables/defaultTable.vue'
 import { mapGetters } from 'vuex';
 import { useRoute } from 'vue-router';
 
@@ -11,7 +11,7 @@ export default {
   },
   components: { MainLayout, DefaultTable },
   computed: {
-    ...mapGetters('products', [
+    ...mapGetters('companies', [
       'fields',
       'data'
     ])

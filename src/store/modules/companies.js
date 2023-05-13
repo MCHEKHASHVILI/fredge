@@ -8,40 +8,41 @@
  * 
  */
 
+import router from "@/router"
+
+const defaultCompany = {
+    name: '',
+    license: '',
+    email: '',
+    address: '',
+    type: '',
+}
+
 const companies = {
     namespaced: true,
     state() {
         return {
-            fields: [ "id", "name", "license", "email", "address"],
-            companies: [
-                {
-                    id: 1,
-                    name: 'company 1',
-                    license: '123456789',
-                    email: 'contact@company1.com',
-                    address: '0179, Sairme street, Tbilisi, Georgia',
-                },
-                {
-                    id: 2,
-                    name: 'company 2',
-                    license: '123456789',
-                    email: 'contact@company2.com',
-                    address: '0179, Sairme street, Tbilisi, Georgia',
-                },
-                {
-                    id: 3,
-                    name: 'company 3',
-                    license: '123456789',
-                    email: 'contact@company3.com',
-                    address: '0179, Sairme street, Tbilisi, Georgia',
-                }
-            ]
+            fields: ["id", ...Object.keys(defaultCompany)],
+            company: { ...defaultCompany },
+            companies: []
         }
     },
     getters: {
         data: state => state.companies,
         fields: state => state.fields,
+        company: state => state.company,
     },
+    mutations: {
+        RESET: (state) => Object.assign(state.company, { ...defaultCompany }),
+        STORE: (state, payload) => state.companies.push(payload),
+    },
+    actions: {
+        store: ({ commit, getters }) => {
+            commit('STORE', {...getters.company})
+            commit('RESET')
+            router.push({ name: 'Companies' })
+        }
+    }
 }
 
 export default companies

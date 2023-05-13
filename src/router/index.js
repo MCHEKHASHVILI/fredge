@@ -1,4 +1,7 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { RouterView, createRouter, createWebHistory } from 'vue-router'
+
+import CompaniesIndex from '@/views/companies/Index.vue'
+import CompaniesCreate from '@/views/companies/Create.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -21,51 +24,69 @@ const router = createRouter({
     },
     {
       path: '/orders',
-      name: 'Orders',
-      meta: {
-        title: 'Orders'
-      },
-      component: () => import('../views/Orders.vue')
-    },
-    {
-      path: '/orders/create',
-      name: 'OrdersCreate',
-      meta: {
-        title: 'Create Order'
-      },
-      component: () => import('../views/OrdersCreate.vue')
+      component: RouterView,
+      children: [
+        {
+          path: "",
+          name: "Orders",
+          component: () => import('@/views/orders/Index.vue'),
+          meta: {
+            title: 'Orders'
+          },
+        },
+        {
+          path: "create",
+          name: "Orders Create",
+          component: () => import('@/views/orders/Create.vue'),
+          meta: {
+            title: 'Orders Create'
+          },
+        },
+      ]
     },
     {
       path: '/companies',
-      name: 'Companies',
-      meta: {
-        title: 'Companies'
-      },
-      component: () => import('../views/Companies.vue')
-    },
-    {
-      path: '/companies/create',
-      name: 'CompaniesCreate',
-      meta: {
-        title: 'Create Company'
-      },
-      component: () => import('../views/CompaniesCreate.vue')
+      component: RouterView,
+      children: [
+        {
+          path: "",
+          name: "Companies",
+          component: CompaniesIndex,
+          meta: {
+            title: 'Companies'
+          },
+        },
+        {
+          path: "create",
+          name: "Companies Create",
+          component: CompaniesCreate,
+          meta: {
+            title: 'Companies Create'
+          },
+        },
+      ]
     },
     {
       path: '/products',
-      name: 'Products',
-      meta: {
-        title: 'Products'
-      },
-      component: () => import('../views/Products.vue')
-    },
-    {
-      path: '/products/create',
-      name: 'ProductsCreate',
-      meta: {
-        title: 'Create Product'
-      },
-      component: () => import('../views/ProductsCreate.vue')
+      component: RouterView,
+      children: [
+        {
+          path: "",
+          name: "Products",
+          meta: {
+            title: "Products"
+          },
+          component: () => import('@/views/products/Index.vue')
+        },
+        {
+          path: "create",
+          name: 'Products Create',
+          meta: {
+            title: 'Create Product'
+          },
+          component: () => import('@/views/products/Create.vue')
+        },
+      ]
     },
   ]
 })

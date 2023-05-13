@@ -5,11 +5,11 @@ import defaultIcon from '../components/icons/defaultIcon.vue'
 const menuItems = ref([
     { icon: defaultIcon, title: 'მთავარი', routeName: 'Home' },
     { icon: defaultIcon, title: 'შეკვეთები', routeName: 'Orders' },
-    { icon: defaultIcon, title: 'ახალი შეკვეთა', routeName: 'OrdersCreate' },
+    { icon: defaultIcon, title: 'ახალი შეკვეთა', routeName: 'Orders Create' },
     { icon: defaultIcon, title: 'კონტრაგენტები', routeName: 'Companies' },
-    { icon: defaultIcon, title: 'კონტრაგენტის დამატება', routeName: 'CompaniesCreate' },
+    { icon: defaultIcon, title: 'კონტრაგენტის დამატება', routeName: 'Companies Create' },
     { icon: defaultIcon, title: 'ნომენკლატურები', routeName: 'Products' },
-    { icon: defaultIcon, title: 'ნომენკლატურის დამატება', routeName: 'ProductsCreate' },
+    { icon: defaultIcon, title: 'ნომენკლატურის დამატება', routeName: 'Products Create' },
 ])
 </script>
 <template>
